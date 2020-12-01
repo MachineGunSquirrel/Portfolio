@@ -1,7 +1,7 @@
 /* Page */
 .page-grid{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 1fr;
   min-height: 100vh;
   background-color: black;
@@ -10,25 +10,29 @@
 /* Navbar */
 
 .sidenav {
+  grid-column: 1;
   height: 100%;
-  width: 0;
-  position: fixed;
+  width: 200px;
+  position: sticky;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #101010;
   overflow-x: hidden;
+  overflow-y: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 2px 2px;
   text-decoration: none;
+  text-align: center;
   font-size: 25px;
   color: #CBCBCB;
   display: block;
   transition: 0.3s;
+  margin: 15px 8px;
 }
 
 .sidenav a:hover {
@@ -41,4 +45,80 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+.social {
+  position: absolute;
+  bottom: 8px;
+  width: 200px;
+}
+.social iframe, span{
+  align-items: center;
+  display: grid;
+}
+
+/* Bio */
+.bio-grid{
+  grid-column: 2;
+  background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url("../Images/adventure.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: grid;
+  grid-template-rows: 45px 1fr 45px;
+}
+.bio-grid span{
+  grid-row: 1;
+  color:  #CBCBCB;
+  transition: all .5s;
+  /* opacity: 0;
+  cursor: arrow; */
+}
+.bio{
+  grid-column: 1;
+  grid-row: 2;
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  margin: auto;
+  /* transform: translate(-50%,-50%); */
+  display: grid;
+  grid-template-rows: 250px auto auto;
+}
+.bio img{
+  width: 200px;
+  margin: auto;
+  align-content: center;
+  display: grid;
+}
+.bio h2{
+  grid-row: 2;
+  color: white;
+  text-align: center;
+  font-size: 70px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.bio h1{
+  grid-row: 3;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+.bio-img{
+  grid-row: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: relative;
+}
+.bio-img img{
+  transition: width .2s, margin .2s;
+  margin-top: 25px;
+}
+.bio-img img:hover{
+  width: 250px;
+  margin-top: 0px;
+  cursor: pointer;
 }
