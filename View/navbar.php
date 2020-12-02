@@ -2,22 +2,37 @@
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Projects</a>
+  <a href="./Index.php" onclick='showNavButton()'>Home</a>
+  <a href="./Projects.php" onclick='showNavButton()'>Projects</a>
   <a href="#">Contact</a>
 
   <!-- Navbar Animation Javascript -->
     <script>
+      function showNavButton(){
+        // var element = document.getElementById('mySidenav');
+          // style = window.getComputedStyle(element);
+          // width = style.getPropertyValue('width');
+          width = document.getElementById('mySidenav').style.width
+          console.log(document.getElementById('mySidenav').style.width);
+            if(width == '200px'){
+              document.getElementById("ham").style.opacity = "0";
+              document.getElementById("ham").style.display = "none";
+            }
+            // else if(width == '0'){
+            else{
+              document.getElementById("ham").style.opacity = "1";
+              document.getElementById("ham").style.display = "block";
+            }
+      }
+
       function openNav() {
         document.getElementById("mySidenav").style.width = "200px";
-        document.getElementById("ham").style.opacity = "0";
-        document.getElementById("ham").style.display = "none";
+        showNavButton()
       }
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("ham").style.opacity = "1";
-        document.getElementById("ham").style.display = "block";
+        showNavButton()
       }
     </script>
 
