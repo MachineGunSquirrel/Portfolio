@@ -11,11 +11,13 @@
       function openNav() {
         document.getElementById("mySidenav").style.width = "200px";
         document.getElementById("ham").style.opacity = "0";
+        document.getElementById("ham").style.display = "none";
       }
 
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("ham").style.opacity = "1";
+        document.getElementById("ham").style.display = "block";
       }
     </script>
 
