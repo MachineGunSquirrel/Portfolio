@@ -2,7 +2,6 @@
   include './View/header.php';
   include './View/navbar.php';
 ?>
-<span id='ham' style="font-size:30px;cursor:pointer;margin-top:5px;margin-left:15px;position:absolute;color:#CBCBCB" onclick="openNav()">&#9776;</span>
 
 <!-- Projects Div -->
   <div class='projects-grid'>
@@ -39,7 +38,7 @@
       <iframe id='demo' frameborder="0"></iframe>
     </div>
     <div class='description'>
-      <h1>Click a title to demo the site.</h1>
+      <h1 onclick="document.getElementById('demo').src = ''">Click a title to demo the site. Click here to close the demo.</h1>
     </div>
 
 
